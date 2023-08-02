@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AyoKrishi - Connect</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <section class="chat">
+    <div class="container">
+
+      <div class="heading">
+        <img class="ayologo" src="./media/ayogo.png" alt="ayokrishi_logo">
+        <label for="heading">AyoKrishi - Connect</label>
+      </div>
+
+      <div class="conversation">
+        <!-- <div class="message message-left">
+          Harshil: Hi, How are you?
+        </div>
+        <div class="message message-right">
+          Ayosh: Great! And you?
+        </div> -->
+      </div>
+
+      <div class="send">
+        <form action="#" id="send-container">
+          <!-- <input type="text" name="messageInput" id="messageInput" placeholder="Enter your message here..."> -->
+          <textarea class="message-input" name="messageInput" id="messageInput" placeholder="Enter your message here..."></textarea>
+
+          <button class="send-button" type="submit"><img class="send-leaf" src="./media/leaf.png" alt=""></button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+  <!-- <script>
+    // Get the message input element
+    const messageInput = document.getElementById('messageInput');
+  
+    // Function to resize the input box based on its content
+    function resizeInput() {
+      messageInput.style.height = 'auto';
+      messageInput.style.height = messageInput.scrollHeight + 'px';
+    }
+  
+    // Attach an event listener to the input element
+    messageInput.addEventListener('input', resizeInput);
+  </script> -->
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.1/socket.io.js" integrity="sha512-Z6C1p1NIexPj5MsVUunW4pg7uMX6/TT3CUVldmjXx2kpip1eZcrAnxIusDxyFIikyM9A61zOVNgvLr/TGudOQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./script/client.js"></script>
+</body>
+
+</html>
