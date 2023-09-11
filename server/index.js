@@ -3,7 +3,6 @@ const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server, { cors: { origin: '*' } });
 
-const path = require('path');
 
 const users = {};
 
@@ -32,8 +31,7 @@ io.on('connection', (socket) => {
 
 // Serve the index.html file
 app.get('/', (req, res) => {
-  const indexPath = path.join(__dirname, '..', 'index.html');
-  res.sendFile(indexPath);
+  res.sendFile(__dirname + '/index.html');
 });
 
 
