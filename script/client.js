@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io('http://localhost:10000');
 // There's no need to specify server port here. Socket.io will handle the port configuration internally and adapt to the hosting environment's settings
 
 const form = document.getElementById('send-container');
