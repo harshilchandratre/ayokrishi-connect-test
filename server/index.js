@@ -29,11 +29,6 @@ io.on('connection', (socket) => {
 
 
 
-// Serve the index.html file
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
-});
-
 
 const PORT = process.env.PORT || 10000;
 console.log(`Server will listen on port ${PORT}`);
