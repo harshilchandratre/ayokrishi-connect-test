@@ -3,6 +3,8 @@ const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server, { cors: { origin: '*' } });
 
+const path = require('path');
+
 const users = {};
 
 io.on('connection', (socket) => {
@@ -25,6 +27,15 @@ io.on('connection', (socket) => {
     }
   });
 });
+
+
+
+// Serve the index.html file
+app.get('/', (req, res) => {
+  const indexPath = path.join(__dirname, '..', 'index.html');
+  res.sendFile(indexPath);
+});
+
 
 const PORT = process.env.PORT || 10000;
 console.log(`Server will listen on port ${PORT}`);
