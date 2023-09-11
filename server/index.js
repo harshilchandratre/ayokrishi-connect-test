@@ -26,7 +26,7 @@ io.on('connection', (socket) => {
   });
 });
 
-const PORT = 8004;
+const PORT = process.env.PORT || 8004; // Use the environment variable or a default port
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
