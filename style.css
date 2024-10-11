@@ -4,6 +4,16 @@ body {
     height: 100vh;
     margin: 0;
     /* background-color: black; */
+    background-image: url('./media/leaf.png'); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha (last value) to control the opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
     
 }
 

@@ -6,6 +6,10 @@ const io = require('socket.io')(server, { cors: { origin: '*' } });
 
 const users = {};
 
+app.get('/', (req, res) => {
+  res.render('../index')
+})
+
 io.on('connection', (socket) => {
   socket.on('new-user-joined', (name) => {
     console.log('New user joined:', name);
@@ -30,7 +34,7 @@ io.on('connection', (socket) => {
 
 
 
-const PORT = 3001;
+const PORT = 3003;
 console.log(`Server will listen on port ${PORT}`);
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
